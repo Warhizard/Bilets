@@ -1,4 +1,4 @@
-п»ї#include <iostream>
+#include <iostream>
 using std::cin;
 using std::cout;
 using std::endl;
@@ -10,36 +10,36 @@ void main()
 
 #ifdef LUCKYTICKER
 	int ticker,sixNumbInTicket, fiveNumbInTicket, fourNumbInTicket, threeNumbInTicket, twoNumbInTicket, firstNumbInTicket;
-	cout << "Р’РІРµРґРёС‚Рµ РІР°С€ Р±РёР»РµС‚ РёР· С€РµСЃС‚РёР·РЅР°С‡РЅС‹С… С†РёС„СЂ: " << endl;
+	cout << "Введите ваш билет из шестизначных цифр: " << endl;
 	cin >> ticker;
-	sixNumbInTicket = ticker % 10;//РџРѕСЃР»РµРґРЅРµРµ 6-Рµ С‡РёСЃР»Рѕ
+	sixNumbInTicket = ticker % 10;//Последнее 6-е число
 	
-	fiveNumbInTicket = ticker % 100 / 10;// 5-Рµ С‡РёСЃР»Рѕ
+	fiveNumbInTicket = ticker % 100 / 10;// 5-е число
 	
-	fourNumbInTicket = ticker % 1000 / 100;// 4-Рµ С‡РёСЃР»Рѕ
+	fourNumbInTicket = ticker % 1000 / 100;// 4-е число
 	
-	threeNumbInTicket = ticker % 10000 / 1000;// 3-Рµ С‡РёСЃР»Рѕ
+	threeNumbInTicket = ticker % 10000 / 1000;// 3-е число
 	
-	twoNumbInTicket = ticker % 100000 / 10000;// 2-Рµ С‡РёСЃР»Рѕ
+	twoNumbInTicket = ticker % 100000 / 10000;// 2-е число
 	
-	firstNumbInTicket = ticker % 1000000 / 100000;// 1-Рµ С‡РёСЃР»Рѕ
+	firstNumbInTicket = ticker % 1000000 / 100000;// 1-е число
 	
 	if (sixNumbInTicket + fiveNumbInTicket + fourNumbInTicket == threeNumbInTicket + twoNumbInTicket + firstNumbInTicket)
 	{
-		cout << "CСѓРјРјР° РїРµСЂРІС‹С… С‚СЂРµС… С‡РёСЃРµР» РІР°С€РµРіРѕ Р±РёР»РµС‚Р° СЂР°РІРЅР°: " << threeNumbInTicket + twoNumbInTicket + firstNumbInTicket << endl;
-		cout << "CСѓРјРјР° РїРѕСЃР»РµРґРЅРёС… С‚СЂРµС… С‡РёСЃРµР» РІР°С€РµРіРѕ Р±РёР»РµС‚Р° СЂР°РІРЅР°: " << sixNumbInTicket + fiveNumbInTicket + fourNumbInTicket << endl;
-		cout << "Р’Р°С€ Р±РёР»РµС‚ СЃС‡Р°СЃС‚Р»РёРІС‹Р№!!! РџРѕР·РґСЂР°РІР»СЏРµРј!" << endl;
+		cout << "Cумма первых трех чисел вашего билета равна: " << threeNumbInTicket + twoNumbInTicket + firstNumbInTicket << endl;
+		cout << "Cумма последних трех чисел вашего билета равна: " << sixNumbInTicket + fiveNumbInTicket + fourNumbInTicket << endl;
+		cout << "Ваш билет счастливый!!! Поздравляем!" << endl;
 	}
 	else
 	{
-		cout << "CСѓРјРјР° РїРµСЂРІС‹С… С‚СЂРµС… С‡РёСЃРµР» РІР°С€РµРіРѕ Р±РёР»РµС‚Р° СЂР°РІРЅР°: " << threeNumbInTicket + twoNumbInTicket + firstNumbInTicket << endl;
-		cout << "CСѓРјРјР° РїРѕСЃР»РµРґРЅРёС… С‚СЂРµС… С‡РёСЃРµР» РІР°С€РµРіРѕ Р±РёР»РµС‚Р° СЂР°РІРЅР°: " << sixNumbInTicket + fiveNumbInTicket + fourNumbInTicket << endl;
-		cout << "Р’Р°С€ Р±РёР»РµС‚ РѕР±С‹С‡РЅС‹Р№, РЅРѕ РЅРµ РїР°РґР°Р№С‚Рµ РґСѓС…РѕРј, РІ СЃР»РµРґСѓСЋС‰РёР№ СЂР°Р· РІР°Рј РѕР±СЏР·Р°С‚РµР»СЊРЅРѕ РїРѕРІРµР·РµС‚ ^_^" << endl;
+		cout << "Cумма первых трех чисел вашего билета равна: " << threeNumbInTicket + twoNumbInTicket + firstNumbInTicket << endl;
+		cout << "Cумма последних трех чисел вашего билета равна: " << sixNumbInTicket + fiveNumbInTicket + fourNumbInTicket << endl;
+		cout << "Ваш билет обычный, но не падайте духом, в следующий раз вам обязательно повезет ^_^" << endl;
 	}
 #endif
 #ifdef POLINDROME
 	int number, reverse = 0;
-	cout << "Р’РІРµРґРёС‚Рµ С‡РёСЃР»Рѕ: " << endl; cin >> number;
+	cout << "Введите число: " << endl; cin >> number;
 	int buffer = number;
 	while (buffer)
 	{
@@ -52,11 +52,11 @@ void main()
 	cout << reverse << endl;
 	if (reverse == number)
 	{
-		cout << "Р§РёСЃР»Рѕ РїРѕР»РёРЅРґСЂРѕРј!!!";
+		cout << "Число полиндром!!!";
 	}
 	else
 	{
-		cout << "Р­С‚Рѕ РѕР±С‹С‡РЅРѕРµ С‡РёСЃР»Рѕ ";
+		cout << "Это обычное число ";
 	}
 #endif
 }
